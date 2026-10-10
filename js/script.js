@@ -14,12 +14,12 @@ function actualizarContador() {
 actualizarContador();
 setInterval(actualizarContador, 1000);
 
-// Galería: colocar foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg en la carpeta img.
+// Galería de KATSEYE: los nombres de las imágenes están en index.html.
 // Si una imagen no existe, queda el fondo decorativo de muestra.
 const slides = [...document.querySelectorAll('.slide')];
 slides.forEach((slide, i) => {
   const image = new Image();
-  image.alt = `Foto ${i + 1} de Juana`;
+  image.alt = `KATSEYE, foto ${i + 1}`;
   image.onload = () => { slide.replaceChildren(image); };
   image.src = `img/${slide.dataset.photo}`;
 });

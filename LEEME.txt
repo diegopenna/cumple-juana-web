@@ -13,7 +13,7 @@ ESTRUCTURA
 FOTOS
 La foto principal de la invitación es img/fotojuana.jpg.
 Guardá las fotos en la carpeta img con los nombres:
-foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg.
+katseye01.jpg, katseye02.jpg, katseye03.jpg y katseye04.jpg.
 La galería las detecta automáticamente y cambia cada 4 segundos.
 Si faltan, muestra fondos decorativos de ejemplo.
 
@@ -34,9 +34,13 @@ sin mapa ni botón de cómo llegar.
 El botón "Conocer Tres Pinos" abre su ubicación en Google Maps.
 La página no incluye mapas incrustados.
 
-IMPORTANTE
-La sugerencia de malla y toalla es opcional y depende de confirmar
-si habrá actividades de pileta. Editá o eliminá esa parte según corresponda.
+CONFIRMACIÓN
+Los botones de asistencia abren WhatsApp al número +5491161142343.
+Cada botón prepara un mensaje; la persona debe enviarlo desde WhatsApp.
+Los enlaces y sus mensajes se editan en index.html, en la invitación y el cierre.
+
+QUÉ LLEVAR
+Ropa cómoda, gorra y protector solar, y repelente.
 
 PUBLICAR EN GITHUB PAGES
 Subí todo el contenido de esta carpeta a un repositorio.
