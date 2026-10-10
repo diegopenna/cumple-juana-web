@@ -11,18 +11,28 @@ ESTRUCTURA
 - img/escenario.webp: fondo original optimizado
 
 FOTOS
+La foto principal de la invitación es img/fotojuana.jpg.
 Guardá las fotos en la carpeta img con los nombres:
 foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg.
 La galería las detecta automáticamente y cambia cada 4 segundos.
 Si faltan, muestra fondos decorativos de ejemplo.
 
+FOTOS DE TRES PINOS
+La sección del destino muestra trespinos01.png a trespinos06.png.
+Las fotos cambian cada 5 segundos, con flechas y un botón para pausar.
+logotrespinos.png se muestra sobre las fotos en un recuadro claro.
+Con la preferencia de movimiento reducido, la galería comienza pausada.
+Para reemplazar fotos, conservá estos nombres en img.
+
 DATOS
 El horario, dirección y textos están en index.html.
 La fecha del contador está en js/script.js.
 
-MAPA
-El mapa de Google está integrado mediante un iframe con una búsqueda
-por dirección. Verificá el pin antes de compartir la página.
+UBICACIONES
+Otamendi 468 es el punto de encuentro y regreso; se muestra como texto,
+sin mapa ni botón de cómo llegar.
+El botón "Conocer Tres Pinos" abre su ubicación en Google Maps.
+La página no incluye mapas incrustados.
 
 IMPORTANTE
 La sugerencia de malla y toalla es opcional y depende de confirmar

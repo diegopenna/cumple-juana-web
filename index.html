@@ -15,8 +15,8 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio">✦ JUANA</a>
-    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Menú principal">
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav" class="nav" aria-label="Menú principal">
       <a href="#inicio">Inicio</a><a href="#invitacion">La fiesta</a><a href="#fotos">Fotos</a><a href="#encuentro">Encuentro</a><a href="#llevar">Qué llevar</a>
     </nav>
   </header>
@@ -25,13 +25,16 @@
     <section id="inicio" class="hero">
       <div class="hero-glow"></div>
       <div class="hero-content">
-        <div class="eyebrow">✧ YOU'RE INVITED ✧</div>
-        <img class="juana-logo" src="img/juana.png" alt="JUANA">
-        <p class="script-title">My Birthday</p>
+        <div class="eyebrow">✧ ESTÁS INVITADO ✧</div>
+        <h1 class="hero-title"><span class="visually-hidden">Cumpleaños de </span><img class="juana-logo" src="img/juana.png" alt="Juana"></h1>
+        <p class="script-title">Mi cumpleaños</p>
         <p class="hero-ribbon">¡UNA FIESTA PARA BRILLAR!</p>
+        <p class="hero-date">Sábado 14 de noviembre de 2026 <span>10:30 a 18:00 hs</span></p>
         <a class="button button-light" href="#invitacion">Descubrí la invitación ↓</a>
       </div>
-      <span class="floating-star star-a">✦</span><span class="floating-star star-b">✧</span><span class="floating-star star-c">✳</span>
+      <span class="floating-star star-a" aria-hidden="true">✦</span><span class="floating-star star-b" aria-hidden="true">✧</span><span class="floating-star star-c" aria-hidden="true">✳</span>
+      <svg class="hero-butterfly butterfly-a" viewBox="0 0 80 60" aria-hidden="true"><path d="M40 30C20-8 0 4 8 27c3 9 13 9 23 8C4 36 15 62 34 48l6-12 6 12c19 14 30-12 3-13 10 1 20 1 23-8C80 4 60-8 40 30Z"/><path class="butterfly-body" d="M40 24v22m0-20-5-8m5 8 5-8"/></svg>
+      <svg class="hero-butterfly butterfly-b" viewBox="0 0 80 60" aria-hidden="true"><path d="M40 30C20-8 0 4 8 27c3 9 13 9 23 8C4 36 15 62 34 48l6-12 6 12c19 14 30-12 3-13 10 1 20 1 23-8C80 4 60-8 40 30Z"/><path class="butterfly-body" d="M40 24v22m0-20-5-8m5 8 5-8"/></svg>
     </section>
 
     <section class="countdown-section" aria-labelledby="faltan-title">
@@ -58,7 +61,7 @@
           <div class="callout">💖 ¡Te espero para pasar un día increíble!</div>
         </div>
         <div class="photo-feature">
-          <div class="photo-photo" aria-label="Espacio para una foto de Juana"><span>✦</span><p>Tu foto favorita<br>de Juana</p><small>Colocá una imagen en img/foto1.jpg</small></div>
+          <div class="photo-photo"><img src="img/fotojuana.jpg" alt="Juana" width="664" height="664" loading="lazy" decoding="async"></div>
           <span class="photo-sticker">✧ MAGIC DAY ✧</span>
         </div>
       </div>
@@ -103,21 +106,33 @@
           <p>Traigan a los chicos a las <strong>10:30 hs</strong> a Otamendi 468. Desde ahí nosotros los llevamos a Tres Pinos para disfrutar del día.</p>
           <p>A las <strong>18:00 hs</strong> regresamos al mismo lugar, donde los pasan a buscar.</p>
           <div class="important">✨ No hace falta ir directamente a Tres Pinos: ¡nosotros nos encargamos del traslado!</div>
-          <a class="button" href="https://www.google.com/maps/search/?api=1&query=Otamendi+468%2C+Caballito%2C+Buenos+Aires" target="_blank" rel="noopener noreferrer">📍 Cómo llegar a Otamendi 468 ↗</a>
         </div>
-        <div class="map-wrap"><iframe title="Mapa del punto de encuentro en Otamendi 468" src="https://maps.google.com/maps?q=Otamendi%20468%2C%20Caballito%2C%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
       </div>
     </section>
 
     <section class="destination-section">
       <div class="section-inner split">
-        <div class="destination-art"><span>🌳</span><strong>Tres Pinos</strong><small>Un día al aire libre</small></div>
+        <div class="destination-gallery" role="region" aria-label="Fotos de Tres Pinos" aria-roledescription="carrusel">
+          <div class="destination-slide active"><img src="img/trespinos01.png" alt="Atardecer con un molino y árboles en Tres Pinos" loading="lazy"></div>
+          <div class="destination-slide" aria-hidden="true"><img src="img/trespinos02.png" alt="Vista de Tres Pinos, foto 2" loading="lazy"></div>
+          <div class="destination-slide" aria-hidden="true"><img src="img/trespinos03.png" alt="Vista de Tres Pinos, foto 3" loading="lazy"></div>
+          <div class="destination-slide" aria-hidden="true"><img src="img/trespinos04.png" alt="Vista de Tres Pinos, foto 4" loading="lazy"></div>
+          <div class="destination-slide" aria-hidden="true"><img src="img/trespinos05.png" alt="Vista de Tres Pinos, foto 5" loading="lazy"></div>
+          <div class="destination-slide" aria-hidden="true"><img src="img/trespinos06.png" alt="Vista de Tres Pinos, foto 6" loading="lazy"></div>
+          <div class="destination-logo"><img src="img/logotrespinos.png" alt="Tres Pinos · Villa de campo" loading="lazy"></div>
+          <button class="slide-arrow prev" type="button" aria-label="Foto anterior de Tres Pinos">‹</button>
+          <button class="slide-arrow next" type="button" aria-label="Foto siguiente de Tres Pinos">›</button>
+          <div class="destination-controls">
+            <span class="destination-counter" aria-live="off">1 / 6</span>
+            <button class="destination-pause" type="button">Pausar</button>
+          </div>
+        </div>
         <div>
           <p class="section-kicker">✦ NUESTRO DESTINO ✦</p>
           <h2>Una aventura en<br><em>Tres Pinos</em></h2>
           <p>Vamos a disfrutar de un día rodeados de naturaleza y diversión en Tres Pinos, en General Rodríguez.</p>
           <p>Este es nuestro destino, pero recordá que <strong>la salida y el regreso son desde Otamendi 468</strong>.</p>
-          <a class="button button-outline" href="https://trespinos.com.ar/" target="_blank" rel="noopener noreferrer">Conocer Tres Pinos ↗</a>
+          <a class="button button-outline" href="https://maps.app.goo.gl/R3fdhJQSns2HM5uN6" target="_blank" rel="noopener noreferrer">Conocer Tres Pinos ↗</a>
         </div>
       </div>
     </section>

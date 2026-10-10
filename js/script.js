@@ -43,13 +43,84 @@ document.querySelector('.slide-arrow.next').addEventListener('click', () => most
 mostrarFoto(0);
 setInterval(() => mostrarFoto(currentSlide + 1), 4000);
 
+// Tres Pinos: galería independiente, con el logo fijo sobre las fotos.
+const destinationGallery = document.querySelector('.destination-gallery');
+if (destinationGallery) {
+  const photos = [...destinationGallery.querySelectorAll('.destination-slide')];
+  const counter = destinationGallery.querySelector('.destination-counter');
+  const pauseButton = destinationGallery.querySelector('.destination-pause');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let photoIndex = 0;
+  let paused = reducedMotion.matches;
+  let timer;
+
+  function showDestinationPhoto(index) {
+    photoIndex = (index + photos.length) % photos.length;
+    photos.forEach((photo, i) => {
+      photo.classList.toggle('active', i === photoIndex);
+      photo.setAttribute('aria-hidden', String(i !== photoIndex));
+    });
+    counter.textContent = `${photoIndex + 1} / ${photos.length}`;
+  }
+
+  function updateDestinationTimer() {
+    clearInterval(timer);
+    pauseButton.textContent = paused ? 'Reproducir' : 'Pausar';
+    if (!paused && !document.hidden) {
+      timer = setInterval(() => showDestinationPhoto(photoIndex + 1), 5000);
+    }
+  }
+
+  function stepDestinationPhoto(direction) {
+    showDestinationPhoto(photoIndex + direction);
+    updateDestinationTimer();
+  }
+
+  destinationGallery.querySelector('.prev').addEventListener('click', () => stepDestinationPhoto(-1));
+  destinationGallery.querySelector('.next').addEventListener('click', () => stepDestinationPhoto(1));
+  pauseButton.addEventListener('click', () => {
+    paused = !paused;
+    updateDestinationTimer();
+  });
+  destinationGallery.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      stepDestinationPhoto(event.key === 'ArrowLeft' ? -1 : 1);
+    }
+  });
+  reducedMotion.addEventListener('change', () => {
+    paused = reducedMotion.matches;
+    updateDestinationTimer();
+  });
+  document.addEventListener('visibilitychange', updateDestinationTimer);
+  updateDestinationTimer();
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const mobileMenu = window.matchMedia('(max-width: 760px)');
+
+function setMenuOpen(open, returnFocus = false) {
+  nav.classList.toggle('open', open);
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  menuButton.textContent = open ? '×' : '☰';
+  if (returnFocus) menuButton.focus();
+}
+
 menuButton.addEventListener('click', () => {
-  const abierto = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(abierto));
+  setMenuOpen(!nav.classList.contains('open'));
 });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  nav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded', 'false');
+  setMenuOpen(false);
 }));
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && nav.classList.contains('open')) setMenuOpen(false, true);
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.site-header')) setMenuOpen(false);
+});
+document.addEventListener('focusin', (event) => {
+  if (!event.target.closest('.site-header')) setMenuOpen(false);
+});
+mobileMenu.addEventListener('change', () => setMenuOpen(false));
