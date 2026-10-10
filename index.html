@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#35144f">
+  <meta name="description" content="¡Te invito al cumple de Juana! Sábado 14 de noviembre de 2026. Nos encontramos en Otamendi 468 a las 10:30.">
+  <title>JUANA ✦ My Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio">✦ JUANA</a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Menú principal">
+      <a href="#inicio">Inicio</a><a href="#invitacion">La fiesta</a><a href="#fotos">Fotos</a><a href="#encuentro">Encuentro</a><a href="#llevar">Qué llevar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="eyebrow">✧ YOU'RE INVITED ✧</div>
+        <img class="juana-logo" src="img/juana.png" alt="JUANA">
+        <p class="script-title">My Birthday</p>
+        <p class="hero-ribbon">¡UNA FIESTA PARA BRILLAR!</p>
+        <a class="button button-light" href="#invitacion">Descubrí la invitación ↓</a>
+      </div>
+      <span class="floating-star star-a">✦</span><span class="floating-star star-b">✧</span><span class="floating-star star-c">✳</span>
+    </section>
+
+    <section class="countdown-section" aria-labelledby="faltan-title">
+      <div class="section-inner center">
+        <p class="eyebrow">✧ LA CUENTA REGRESIVA ✧</p>
+        <h2 id="faltan-title">¡Falta cada vez menos!</h2>
+        <div class="countdown" role="timer" aria-label="Tiempo hasta el cumpleaños">
+          <div class="count-item"><strong id="days">--</strong><span>DÍAS</span></div>
+          <div class="count-item"><strong id="hours">--</strong><span>HORAS</span></div>
+          <div class="count-item"><strong id="minutes">--</strong><span>MINUTOS</span></div>
+          <div class="count-item"><strong id="seconds">--</strong><span>SEGUNDOS</span></div>
+        </div>
+        <p id="countdown-note" class="small-note">Sábado 14 de noviembre de 2026 · 10:30 hs</p>
+      </div>
+    </section>
+
+    <section id="invitacion" class="light-section">
+      <div class="section-inner split">
+        <div>
+          <p class="section-kicker">✦ UNA AVENTURA ESPECIAL ✦</p>
+          <h2>¡Te invito<br>a mi <em>cumple!</em></h2>
+          <p class="lead">Vamos a pasar un día al aire libre, con mucha diversión y buena onda.</p>
+          <p>Nos espera una aventura en <strong>Tres Pinos</strong>, con juegos, naturaleza y muchos momentos para compartir. ¡Lo importante es que vengas a festejar conmigo!</p>
+          <div class="callout">💖 ¡Te espero para pasar un día increíble!</div>
+        </div>
+        <div class="photo-feature">
+          <div class="photo-photo" aria-label="Espacio para una foto de Juana"><span>✦</span><p>Tu foto favorita<br>de Juana</p><small>Colocá una imagen en img/foto1.jpg</small></div>
+          <span class="photo-sticker">✧ MAGIC DAY ✧</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="fotos" class="gallery-section">
+      <div class="section-inner center">
+        <p class="eyebrow">✧ OUR LITTLE STARS ✧</p>
+        <h2>Momentos que brillan</h2>
+        <p class="section-subtitle">Un espacio para nuestras fotos favoritas</p>
+        <div class="slideshow" aria-label="Galería de fotos">
+          <div class="slide active" data-photo="foto1.jpg"><div class="slide-placeholder">✦<span>Foto 1</span></div></div>
+          <div class="slide" data-photo="foto2.jpg"><div class="slide-placeholder">♡<span>Foto 2</span></div></div>
+          <div class="slide" data-photo="foto3.jpg"><div class="slide-placeholder">✧<span>Foto 3</span></div></div>
+          <div class="slide" data-photo="foto4.jpg"><div class="slide-placeholder">☆<span>Foto 4</span></div></div>
+          <button class="slide-arrow prev" aria-label="Foto anterior">‹</button>
+          <button class="slide-arrow next" aria-label="Foto siguiente">›</button>
+          <div class="slide-dots" aria-label="Elegir foto"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <div class="section-inner">
+        <p class="section-kicker center">✧ GUARDÁ LA FECHA ✧</p>
+        <h2 class="center">Nuestro gran día</h2>
+        <div class="detail-grid">
+          <article class="detail-card"><span class="detail-icon">📅</span><h3>Sábado 14</h3><p>Noviembre de 2026</p></article>
+          <article class="detail-card"><span class="detail-icon">🕥</span><h3>10:30 hs</h3><p>Nos encontramos en Otamendi 468</p></article>
+          <article class="detail-card"><span class="detail-icon">🚌</span><h3>18:00 hs</h3><p>Los pasan a buscar por el mismo lugar</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="encuentro" class="meeting-section">
+      <div class="section-inner split meeting-split">
+        <div>
+          <p class="section-kicker">✦ IMPORTANTE ✦</p>
+          <h2>Punto de<br><em>encuentro</em></h2>
+          <p class="address">📍 Otamendi 468</p>
+          <p><strong>Caballito, Ciudad de Buenos Aires</strong></p>
+          <p>Traigan a los chicos a las <strong>10:30 hs</strong> a Otamendi 468. Desde ahí nosotros los llevamos a Tres Pinos para disfrutar del día.</p>
+          <p>A las <strong>18:00 hs</strong> regresamos al mismo lugar, donde los pasan a buscar.</p>
+          <div class="important">✨ No hace falta ir directamente a Tres Pinos: ¡nosotros nos encargamos del traslado!</div>
+          <a class="button" href="https://www.google.com/maps/search/?api=1&query=Otamendi+468%2C+Caballito%2C+Buenos+Aires" target="_blank" rel="noopener noreferrer">📍 Cómo llegar a Otamendi 468 ↗</a>
+        </div>
+        <div class="map-wrap"><iframe title="Mapa del punto de encuentro en Otamendi 468" src="https://maps.google.com/maps?q=Otamendi%20468%2C%20Caballito%2C%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+
+    <section class="destination-section">
+      <div class="section-inner split">
+        <div class="destination-art"><span>🌳</span><strong>Tres Pinos</strong><small>Un día al aire libre</small></div>
+        <div>
+          <p class="section-kicker">✦ NUESTRO DESTINO ✦</p>
+          <h2>Una aventura en<br><em>Tres Pinos</em></h2>
+          <p>Vamos a disfrutar de un día rodeados de naturaleza y diversión en Tres Pinos, en General Rodríguez.</p>
+          <p>Este es nuestro destino, pero recordá que <strong>la salida y el regreso son desde Otamendi 468</strong>.</p>
+          <a class="button button-outline" href="https://trespinos.com.ar/" target="_blank" rel="noopener noreferrer">Conocer Tres Pinos ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="llevar" class="packing-section">
+      <div class="section-inner center">
+        <p class="section-kicker">✧ PREPARATE PARA DIVERTIRTE ✧</p>
+        <h2>¿Qué llevar?</h2>
+        <p class="section-subtitle">Algunas ideas para disfrutar del día</p>
+        <div class="packing-grid">
+          <div>🎒<span>Ropa cómoda</span></div><div>🧢<span>Gorra y protector solar</span></div><div>💧<span>Botella de agua</span></div><div>🩱<span>Malla y toalla*</span></div><div>💜<span>¡Muchas ganas de divertirse!</span></div>
+        </div>
+        <p class="small-note">*Confirmar antes si habrá actividades de pileta.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner"><p class="footer-script">¡Te espero para compartir<br>un día increíble! ♡</p><img src="img/juana.png" alt="JUANA"><p>Sábado 14 de noviembre de 2026 · 10:30 a 18:00 hs · Otamendi 468</p><small>✦ JUANA · MY BIRTHDAY · 2026 ✦</small></div>
+  </footer>
+</body>
+</html>

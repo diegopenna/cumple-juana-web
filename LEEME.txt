@@ -1,0 +1,34 @@
+CUMPLE DE JUANA — LANDING PAGE
+================================
+
+Abrí index.html en Chrome para ver la página.
+
+ESTRUCTURA
+- index.html: contenido y secciones
+- css/styles.css: diseño, colores y adaptación a celulares
+- js/script.js: contador, galería y menú
+- img/juana.png: logo original
+- img/escenario.webp: fondo original optimizado
+
+FOTOS
+Guardá las fotos en la carpeta img con los nombres:
+foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg.
+La galería las detecta automáticamente y cambia cada 4 segundos.
+Si faltan, muestra fondos decorativos de ejemplo.
+
+DATOS
+El horario, dirección y textos están en index.html.
+La fecha del contador está en js/script.js.
+
+MAPA
+El mapa de Google está integrado mediante un iframe con una búsqueda
+por dirección. Verificá el pin antes de compartir la página.
+
+IMPORTANTE
+La sugerencia de malla y toalla es opcional y depende de confirmar
+si habrá actividades de pileta. Editá o eliminá esa parte según corresponda.
+
+PUBLICAR EN GITHUB PAGES
+Subí todo el contenido de esta carpeta a un repositorio.
+En Settings > Pages, seleccioná Deploy from a branch y main / (root).
+La página de inicio debe llamarse index.html.
